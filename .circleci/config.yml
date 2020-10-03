@@ -28,7 +28,7 @@ jobs:
       # Install additional PHP modules
       - run: sudo pecl channel-update pecl.php.net
       - run: sudo pecl install zip && sudo docker-php-ext-enable zip
-      - run: sudo pecl install xdebug && sudo docker-php-ext-enable xdebug
+      #- run: sudo pecl install xdebug && sudo docker-php-ext-enable xdebug
       - run: sudo docker-php-ext-install gd
       - run: sudo docker-php-ext-install bcmath && sudo docker-php-ext-enable bcmath
       - run: sudo docker-php-ext-install mcrypt && sudo docker-php-ext-enable mcrypt
