@@ -35,11 +35,11 @@ jobs:
       - run: sudo docker-php-ext-install pdo_mysql && sudo docker-php-ext-enable pdo_mysql
       - run: sudo apt-get install mysql-client
       # Install NGINX
-      - run: sudo apt-get install nginx
-      - run: sudo /etc/init.d/nginx start
+      #- run: sudo apt-get install nginx
+      #- run: sudo /etc/init.d/nginx start
       # Start PHP-FPM pool
-      - run: sudo php-fpm -D -y tests/_data/circleci.conf
-      - run: php composer.phar self-update
+      #- run: sudo php-fpm -D -y tests/_data/circleci.conf
+      #- run: php composer.phar self-update
 
       # Download and cache dependencies
       - restore_cache:
